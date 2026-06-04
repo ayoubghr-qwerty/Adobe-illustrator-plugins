@@ -111,34 +111,5 @@ STEP 4 — DISABLE DEBUG MODE AFTER INSTALL (optional)
   Illustrator 2025 (v29.x)  →  CEP 11  →  CSXS.11
 
 
-================================================================
-  TROUBLESHOOTING
-================================================================
 
-  Panel shows but looks blank / broken
-    → Right-click inside the panel > select "Reload"
-    → Or open Chrome debug console:
-       Go to http://localhost:PORT in Chrome while Illustrator is open
-       (PORT is defined in your manifest.xml <Resources> tag)
-
-  "Extension is not compatible with this product"
-    → Check that the manifest.xml HostList matches your Illustrator version
-    → The <Host Name="ILST" Version="[24.0,99.9]" /> range must include your version
-
-  Mac: panel appears but immediately disappears
-    → Go to System Settings > Privacy & Security
-    → Allow the extension if it was blocked
-
-  Windows: registry key disappears after restart
-    → Reapply the reg add command — some Windows configurations reset it
-
-
-================================================================
-  NEED HELP?
-================================================================
-
-  Contact DigiTa:
-  Facebook / TikTok / Pinterest: @DigiTa
-
-================================================================
 
