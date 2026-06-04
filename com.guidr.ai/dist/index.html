@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guidr</title>
+  <script src="./CSInterface.js"></script>
+  <script>
+    (function() {
+      try {
+        if (typeof window.__adobe_cep__ !== 'undefined') {
+          var csInterface = new CSInterface();
+          var env = csInterface.getHostEnvironment();
+          var bg = env.appSkinInfo.panelBackgroundColor.color;
+          var r = bg.red || bg.r || 0;
+          var g = bg.green || bg.g || 0;
+          var b = bg.blue || bg.b || 0;
+          var lum = r * 0.299 + g * 0.587 + b * 0.114;
+          document.documentElement.setAttribute('data-theme', lum < 128 ? 'dark' : 'light');
+          document.documentElement.style.setProperty('--host-bg', 'rgb(' + r + ',' + g + ',' + b + ')');
+        }
+      } catch(e) {}
+    })();
+  </script>
+  
+  
+<link rel="stylesheet" href="./assets/style-BhRyMiZd.css"></head>
+<body>
+  <div id="app"></div>
+<script src="./assets/index-DFBqmudB.js"></script></body>
+</html>
